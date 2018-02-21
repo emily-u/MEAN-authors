@@ -1,12 +1,12 @@
 <h1>Favorite authors</h1>
 <a [routerLink]="['new']">Add an author</a>
 
-<table *ngIf="authors">
+<table *ngFor="let t of authors">
     <tr>
       <th>Author</th>
       <th>Actions available</th> 
     </tr>
-    <tr *ngFor="let t of authors">
+    <tr>
       <td>{{t.name}}</td>
       <td>
         <a [routerLink]="['/edit', t._id, t.name]"><button>Edit</button></a>
