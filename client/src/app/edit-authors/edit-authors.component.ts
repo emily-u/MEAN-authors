@@ -23,9 +23,9 @@ export class EditAuthorsComponent implements OnInit {
   ngOnInit() {
     this._route.paramMap.subscribe((params) => {
       console.log(params);
-      this.name = params.get("authorname");
+      this.editAuthor.name= params.get("authorname");
     })
-    console.log(this.name);
+    console.log("33333333", this.name);
   }
   
 
